@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_title %} upload - lzc's Blog {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/upload_article_form.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <h2>上传新文章</h2>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="id_title">文章标题</label>
+        {{ form.title }}
+
+        <label for="id_content">文章内容</label>
+        {{ form.body }}
+
+        <button type="submit">提交</button>
+    </form>
+
+{#    <p><a href="/articles/">返回文章列表</a></p>#}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}About - lzc's blog{% endblock %}
+
+{% block content %}
+    <section class="hero bg-light text-center py-5">
+        <div class="container">
+            <h2 class="display-4 text-primary">Welcome to Lzc's Blog</h2>
+            <p class="lead text-muted">A space where ideas blossom. Explore, read, and share your thoughts with the
+                world.</p>
+            <a href="{% url 'index' %}" class="btn btn-success btn-lg">Explore Blog</a>
+        </div>
+    </section>
+{% endblock %}

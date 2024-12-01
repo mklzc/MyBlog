@@ -1,0 +1,59 @@
+/* 表单样式 */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* 表单宽度设置为100% */
+}
+
+form label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 输入框、文本框 */
+form input, form textarea {
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    width: 100%; /* 输入框和文本框宽度设置为100% */
+}
+
+/* 输入框获取焦点时的效果 */
+form input:focus, form textarea:focus {
+    border-color: #0073e6;
+    box-shadow: 0 0 8px rgba(0, 115, 230, 0.4);
+}
+
+/* 输入框的 placeholder 样式 */
+form input::placeholder, form textarea::placeholder {
+    color: #999;
+}
+
+/* 多行文本框 */
+form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* 提交按钮 */
+form button {
+    font-size: 16px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* 按钮宽度设置为100% */
+}
+
+/* 提交按钮悬浮效果 */
+form button:hover {
+    background-color: #005bb5;
+}

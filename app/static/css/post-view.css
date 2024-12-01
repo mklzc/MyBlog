@@ -1,0 +1,57 @@
+/* Post Details */
+.post-detail {
+    margin-bottom: 40px;
+}
+
+.post-header {
+    margin-bottom: 20px;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.post-meta {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.post-body {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.post-footer {
+    margin-top: 20px;
+}
+
+.tags a {
+    font-size: 0.9rem;
+    margin: 0 5px;
+}
+
+.comment-form {
+    margin-top: 40px;
+}
+
+.comment-form textarea {
+    resize: vertical;
+}
+
+.comment {
+    margin-bottom: 20px;
+}
+
+.comment strong {
+    font-weight: bold;
+}
+
+.comment p {
+    font-size: 1.1rem;
+}
+
+.comment small {
+    font-size: 0.8rem;
+    color: #6c757d;
+}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head_title %}Contact me - lzc's Blog{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="email-container">
+        <h2 class="contact-header">Feel free to drop me a line.</h2>
+        <p>
+            <a href="mailto:mklzc102@qq.com" class="email-link">
+                mklzc102@qq.com
+            </a>
+        </p>
+    </div>
+{% endblock %}

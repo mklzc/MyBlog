@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filters %}
+{% block head_title %}Login - lzc's Blog{% endblock %}
+{% block head %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register_and_login_form.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            {{ form.email | add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            {{ form.password | add_class:"form-control" }}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+        <p class = "mt-3" style="text-align: right;">
+            没有账号？<a href="{% url 'register' %}">点击注册</a>
+        </p>
+    </form>
+
+</div>
+{% endblock %}

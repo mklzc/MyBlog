@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block head_title %}User Profile - lzc's Blog{% endblock %}
+{% block head %}
+    <style>
+        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #f1f1f1;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <body class="bg-light">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <!-- 用户头像 -->
+                        {% if profile.avatar %}
+                            <img src="{{ profile.avatar.url }}" alt="Avatar" class="profile-avatar mb-3">
+                        {% else %}
+                            <img src="{% static 'img/default_avatar.jpg' %}" alt="Default Avatar" class="profile-avatar mb-3">
+                        {% endif %}
+                        <h3 class="card-title">{{ user.username }}</h3>
+                        <p>{{ profile.bio }}</p>
+
+                        <!-- 用户基本信息 -->
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Email:</strong> {{ user.email }}</li>
+                            {% if profile.location %}
+                                <li class="list-group-item"><strong>Location:</strong> {{ profile.location }}</li>
+                            {% endif %}
+                        </ul>
+
+                        <!-- 编辑按钮 TODO-->
+                        <a href="{% url 'edit-profile' %}" class="btn btn-primary mt-3">Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

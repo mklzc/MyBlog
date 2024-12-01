@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block head_title %}lzc's blog{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+{#    <script type="text/javascript" async src="{% static 'js/mathjax/tex-chtml-full.js' %}"></script>#}
+{#    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>#}
+
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="container">
+{#            <h1 class="h3"><a href="/index" class="text-white text-decoration-none">My Blog</a></h1>#}
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == '/index/' %}active{% endif %}" href="/index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == '/about/' %}active{% endif %}" href="/about/">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}" href="/contact/">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == '/blog/' %}active{% endif %}" href="/blog/">Blog</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto">
+                            {% if user.is_authenticated %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'user-profile' username=user.username %}">Hello, {{ user.username }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-danger" href="/logout/">Logout</a>
+                                </li>
+                            {% else %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/login/">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/register/">Sign Up</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container py-4">
+        <!-- 显示消息 -->
+        {% if messages %}
+            <div class="alert alert-info">
+                {% for message in messages %}
+                    <div>{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <div class="main-content">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-3 footer">
+        <div class="container text-center">
+            <p>&copy; {{ now.year }} My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

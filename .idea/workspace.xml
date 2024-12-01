@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="47151076-780a-4ed8-9da4-e35a227e29ab" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/MyBlog.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/contact.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/post-view.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/register_and_login_form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/upload_article_form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/img/default_avatar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/jquery-3.7.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/a11y/assistive-mml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/a11y/complexity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/a11y/explorer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/a11y/semantic-enrich.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/a11y/sre.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/adaptors/liteDOM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/asciimath.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/mml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/mml/entities.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/mml/extensions/mml3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/mml/extensions/mml3.sef.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex-base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex-full.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/all-packages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/ams.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/amscd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/autoload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/bbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/boldsymbol.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/braket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/bussproofs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/cancel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/cases.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/centernot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/color.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/colortbl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/colorv2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/configmacros.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/empheq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/enclose.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/extpfeil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/gensymb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/mathtools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/mhchem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/newcommand.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/noerrors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/noundefined.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/physics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/require.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/setoptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/tagformat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/textcomp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/textmacros.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/unicode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/upgreek.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/input/tex/extensions/verb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/latest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/mml-chtml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/mml-svg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/node-main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/tex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/chtml/fonts/woff-v2/MathJax_Zero.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/svg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/output/svg/fonts/tex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/sre/mathmaps/base.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/sre/mathmaps/ca.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/sre/mathmaps/da.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/sre/mathmaps/de.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/sre/mathmaps/en.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/sre/mathmaps/es.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/sre/mathmaps/fr.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/sre/mathmaps/hi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/sre/mathmaps/it.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/sre/mathmaps/nb.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/sre/mathmaps/nemeth.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/sre/mathmaps/nn.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/sre/mathmaps/sv.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/startup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/tex-chtml-full-speech.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/tex-chtml-full.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/tex-chtml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/tex-mml-chtml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/tex-mml-svg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/tex-svg-full.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/tex-svg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/ui/lazy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/ui/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/mathjax/ui/safe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/contact_view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/edit_profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/login_test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/post_view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/upload_article.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/user_profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templatetags/custom_filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2pVsV2rpQ05O9PxpkiWLlavXEtD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django 服务器.MyBlog.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lzc/PycharmProjects/MyBlog/app/static/img&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;sql.code.style.group&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app\static\img" />
+      <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app\static\js" />
+      <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lzc\PycharmProjects\MyBlog" />
+      <recent name="C:\Users\lzc\PycharmProjects\MyBlog\media" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MyBlog" type="Python.DjangoServer" factoryName="Django server">
+      <module name="MyBlog" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="MyBlog.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
+        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="47151076-780a-4ed8-9da4-e35a227e29ab" name="更改" comment="" />
+      <created>1732862598216</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732862598216</updated>
+      <workItem from="1732862599395" duration="1188000" />
+      <workItem from="1732866745757" duration="2209000" />
+      <workItem from="1732891923190" duration="13706000" />
+      <workItem from="1732930123108" duration="12342000" />
+      <workItem from="1732972780960" duration="4770000" />
+      <workItem from="1733019248291" duration="7352000" />
+      <workItem from="1733038267901" duration="322000" />
+      <workItem from="1733038904231" duration="5089000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

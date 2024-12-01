@@ -1,0 +1,85 @@
+/*body {*/
+/*    font-family: 'Roboto', sans-serif;*/
+/*    background: linear-gradient(135deg, #a0f3f3, #66e066); !* 渐变背景，薄荷绿渐变效果 *!*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    color: #333;*/
+/*}*/
+
+/* 内容容器 */
+.email-container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: black;
+    border-radius: 12px; /* 圆角效果 */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* 更强的阴影效果 */
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 使容器在 hover 时轻微上浮 */
+.email-container:hover {
+    transform: translateY(-5px); /* hover 上浮 */
+}
+
+/* 页头样式 */
+h2.contact-header {
+    font-size: 2rem;
+    color: white; /* 薄荷绿 */
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 2px; /* 增加字母间距，使标题更加醒目 */
+}
+
+/* 内容段落样式 */
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* 邮箱链接样式 */
+.email-link {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #66e066;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px; /* 圆角效果 */
+    border: 2px solid #66e066; /* 边框样式 */
+    transition: all 0.3s ease;
+}
+
+/* 邮箱链接 hover 动效 */
+.email-link:hover {
+    color: white;
+    background-color: #66e066; /* 背景色和文本反转 */
+    border-color: #66e066; /* 边框颜色变为深薄荷绿 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 添加阴影 */
+    transform: translateY(-2px); /* 增加轻微的浮动效果 */
+}
+
+/* 邮箱链接点击效果 */
+.email-link:active {
+    transform: translateY(0); /* 点击时返回原位 */
+}
+
+/* 小屏幕优化 */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2.contact-header {
+        font-size: 2rem;
+    }
+
+    .email-link {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+}

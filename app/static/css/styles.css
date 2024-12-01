@@ -1,0 +1,114 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    background-color: #f1f1f1;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* 全局设置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 60px; /* 留出顶部导航栏空间 */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 导航栏 */
+.navbar {
+    background-color: #1a1a1d; /* 深色背景 */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+
+.navbar .nav-link {
+    color: #ffffff;
+    padding: 14px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    background-color: #98FF98;
+    color: #333;
+    border-radius: 4px;
+}
+
+/* 页面内容 */
+.main-content {
+    padding-bottom: 60px; /* 留出空间给页脚 */
+    /*padding: 60px 20px; !* 给主内容区域添加上方间距 *!*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+    font-weight: 600;
+}
+
+/* 错误提示框 */
+.alert {
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+}
+
+/* 成功提示 */
+.alert-success {
+    background-color: #28a745;
+    color: white;
+}
+
+/* 错误提示 */
+.alert-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+a:hover {
+    color: blue;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar .nav-link {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}

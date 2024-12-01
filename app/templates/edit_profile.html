@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <style>
+        .avatar-preview {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #f1f1f1;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center mb-4">编辑个人资料</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <!-- Avatar -->
+                <div class="mb-3 text-center">
+                    <label for="avatar" class="form-label"></label>
+                    {% if profile.avatar %}
+                        <img src="{{ profile.avatar.url }}" alt="Avatar" class="avatar-preview mb-2" width="150" height="150">
+                    {% else %}
+                        <img src="{% static 'img/default_avatar.jpg' %}" alt="Default Avatar" class="avatar-preview mb-2" width="150" height="150">
+                    {% endif %}
+                    <input type="file" id="avatar" name="avatar" class="form-control" accept="image/*">
+                </div>
+
+                <!-- Bio -->
+                <div class="mb-3">
+                    <label for="bio" class="form-label">个性签名</label>
+                    <textarea class="form-control" id="bio" name="bio" rows="4">{{ profile.bio }}</textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">保存修改</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
