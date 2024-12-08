@@ -1,12 +1,11 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends 'base.html' %}
 
-{% block head_title %}Upload Post{% endblock %}
+{% block head_title %}Edit Post{% endblock %}
 
 {% block content %}
-    <section id="create-post" class="my-5">
+    <section id="edit-post" class="my-5">
         <div class="container">
-            <h3 class="text-center mb-4 text-primary">发布新文章</h3>
+            <h3 class="text-center mb-4 text-primary">编辑文章</h3>
 
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
@@ -14,7 +13,7 @@
                 <!-- 文章标题 -->
                 <div class="mb-4">
                     <label for="id_title" class="form-label">文章标题</label>
-                    <input type="text" class="form-control" id="id_title" name="title" placeholder="请输入文章标题"
+                    <input type="text" class="form-control" id="id_title" name="title" value="{{ form.title.value }}"
                            required>
                     {% if form.title.errors %}
                         <div class="alert alert-danger mt-2">
@@ -28,8 +27,8 @@
                 <!-- 文章内容 -->
                 <div class="mb-4">
                     <label for="id_body" class="form-label">文章内容</label>
-                    <textarea class="form-control" id="id_body" name="body" rows="8" placeholder="请输入文章内容"
-                              required></textarea>
+                    <textarea class="form-control" id="id_body" name="body" rows="8"
+                              required>{{ form.body.value }}</textarea>
                     {% if form.body.errors %}
                         <div class="alert alert-danger mt-2">
                             {% for error in form.body.errors %}
@@ -39,23 +38,9 @@
                     {% endif %}
                 </div>
 
-{#                <!-- 文章封面图片 -->#}
-{#                <div class="mb-4">#}
-{#                    <label for="id_image" class="form-label">文章封面</label>#}
-{#                    <input type="file" class="form-control" id="id_image" name="image" accept="image/*">#}
-{#                    {% if form.image.errors %}#}
-{#                        <div class="alert alert-danger mt-2">#}
-{#                            {% for error in form.image.errors %}#}
-{#                                <p>{{ error }}</p>#}
-{#                            {% endfor %}#}
-{#                        </div>#}
-{#                    {% endif %}#}
-{#                </div>#}
-
-                <!-- 提交按钮 -->
                 <div class="d-flex justify-content-between">
-                    <button type="submit" class="btn btn-success btn-lg">发布文章</button>
                     <a href="{% url 'user-post-list' request.user.username %}" class="btn btn-secondary btn-lg">取消</a>
+                    <button type="submit" class="btn btn-success btn-lg">保存修改</button>
                 </div>
             </form>
         </div>

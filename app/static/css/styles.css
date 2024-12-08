@@ -5,7 +5,7 @@ footer {
     width: 100%;
     text-align: center;
     font-size: 14px;
-    background-color: #f1f1f1;
+    background-color: #333333;
     margin-top: 40px;
 }
 
@@ -36,7 +36,7 @@ a {
 
 /* 导航栏 */
 .navbar {
-    background-color: #1a1a1d; /* 深色背景 */
+    background-color: #333333; /* 深色背景 */
     position: fixed;
     width: 100%;
     top: 0;

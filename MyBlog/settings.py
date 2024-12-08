@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=nmxx$1i(qqv+jsyaq3y99(b5e@bv2ibd(=a&7c)7wu1belq6i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', '2001:da8:215:8f02:f479:bae1:c0d5:f282', '::1', '127.0.0.1']
+ALLOWED_HOSTS = ['*', ]
 
 
 # Application definition
@@ -135,3 +135,10 @@ AUTH_USER_MODEL = 'app.MyUser'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+CORS_ALLOWED_ORIGINS = [
+    "https://blog.asyncerror.top",
+]
+CSRF_TRUSTED_ORIGINS = [
+    'https://blog.asyncerror.top',
+]

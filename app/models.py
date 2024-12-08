@@ -3,11 +3,10 @@ from django.contrib.auth.models import PermissionsMixin
 from django.db import models
 from django.urls import reverse
 
-# Create your models here.
-
 class BlogPost(models.Model):
     title = models.CharField(max_length=100, unique=True)
     author = models.CharField(max_length=100)
+    comments_count = models.IntegerField(default=0)
     # slug = models.SlugField(max_length=100, unique=True)
     body = models.TextField()
     posted = models.DateTimeField(db_index=True, auto_now_add=True)
@@ -56,3 +55,10 @@ class UserProfile(models.Model):
     def get_absolute_url(self):
         return reverse('user-profile', args=[self.user.username])
 
+class Comment(models.Model):
+    user = models.ForeignKey(MyUser, on_delete=models.CASCADE)
+    post_id = models.ForeignKey(BlogPost, on_delete=models.CASCADE)
+    posted = models.DateTimeField(auto_now_add=True)
+    content = models.TextField()
+    def __str__(self):
+        return self.user.username

@@ -1,0 +1,16 @@
+.my-card {
+    background-color: #2F2F2F; /* 卡片背景色为黑色 */
+    border: 1px solid #98FF98; /* 卡片边框为薄荷绿 */
+    border-radius: 10px; /* 圆角 */
+    transition: transform 0.3s ease-in-out; /* 过渡效果 */
+}
+
+/* 鼠标悬浮时卡片效果 */
+.my-card:hover {
+    transform: translateY(-10px); /* 鼠标悬浮时卡片上浮 */
+    border-color: #00FF7F; /* 鼠标悬浮时边框变成亮薄荷绿 */
+}
+
+/*.card-text small {*/
+/*    !*color: #A9A9A9; !* 设置作者和日期为浅灰色 *!*!*/
+/*}*/

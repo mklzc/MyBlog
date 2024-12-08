@@ -1,0 +1,27 @@
+/* 卡片的悬浮效果 */
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* 格式化文章卡片 */
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.btn-primary {
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  text-transform: uppercase;
+}

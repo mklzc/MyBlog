@@ -20,9 +20,11 @@ from django.urls import path
 from app import views
 from django.conf.urls.static import static
 
+from app.views import UserPostListView, PostDeleteView, PostEditView, IndexView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.index, name='index'),
+    path('index/', IndexView.as_view(), name='index'),
     path('', views.root_page),
     path('logout/', views.logout_view, name = 'logout'),
     path('login/', views.login_view , name = 'login'),
@@ -33,6 +35,10 @@ urlpatterns = [
     path('blog/', views.upload_article, name='upload-article'),
     path('user_profile/<str:username>/', views.user_profile, name='user-profile'),
     path('edit_profile/', views.edit_profile, name='edit-profile'),
+    path('posts/<str:name>', UserPostListView.as_view(), name='user-post-list'),
+    path('post/<int:pk>/edit/', PostEditView.as_view(), name='post-edit'),  # 编辑文章
+    path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),  # 删除文章
 ]
 
-# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

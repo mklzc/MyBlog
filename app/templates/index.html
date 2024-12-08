@@ -1,31 +1,89 @@
 {% extends 'base.html' %}
-{% block title %}Welcome to my blog{% endblock %}
+
+{% load static %}
+
+{% block head_title %}Welcome to my blog{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/components/my-card.css' %}">
+{% endblock %}
 
 {% block content %}
 
-    <section id="blog-posts" class="my-5">
+    <section id="blog-posts">
         <div class="container">
             <h3 class="text-center mb-4">最新文章</h3>
             <div class="row">
                 {% for post in posts %}
                     <div class="col-md-4 mb-4">
-                        <div class="card">
+                        <div class="card my-card">
                             <div class="card-body">
-                                <h5 class="card-title">{{ post.title }}</h5>
+                                <h5 class="card-title text-light">{{ post.title }}</h5>
                                 <p class="card-text">
-                                    <small class="text-muted">
+                                    <small class="text-light">
                                         发布于 {{ post.posted|date:"Y年m月d日 H:i" }}  <!-- 格式化日期 -->
                                     </small>
-                                    <small class="text-muted">
+                                    <br>
+                                    <small class="text-light">
                                         作者：{{ post.author }}
                                     </small>
                                 </p>
-                                <a href="{% url 'post-view' post.id %}" class="btn btn-primary">Read More</a>
+                                <a href="{% url 'post-view' post.id %}" class="btn my-btn">Read More</a>
                             </div>
                         </div>
                     </div>
                 {% endfor %}
             </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    {% if page_obj.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page=1" aria-label="First">
+                                <span aria-hidden="true">&laquo;&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.previous_page_number }}"
+                               aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <span class="page-link">&laquo;&laquo;</span>
+                        </li>
+                        <li class="page-item disabled">
+                            <span class="page-link">&laquo;</span>
+                        </li>
+                    {% endif %}
+
+                    <li class="page-item disabled">
+                        <span class="page-link">第 {{ page_obj.number }} 页，共 {{ page_obj.paginator.num_pages }} 页</span>
+                    </li>
+
+                    {% if page_obj.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Last">
+                                <span aria-hidden="true">&raquo;&raquo;</span>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <span class="page-link">&raquo;</span>
+                        </li>
+                        <li class="page-item disabled">
+                            <span class="page-link">&raquo;&raquo;</span>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
         </div>
     </section>
 {% endblock %}

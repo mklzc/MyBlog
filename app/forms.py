@@ -1,6 +1,6 @@
 from django import forms
 
-from app.models import BlogPost, UserProfile
+from app.models import BlogPost, UserProfile, Comment
 
 
 # 注册表单
@@ -34,4 +34,8 @@ class UserProfileForm(forms.ModelForm):
 
     avatar = forms.ImageField()
     bio = forms.CharField(widget=forms.Textarea, required=False)
-    
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['content']

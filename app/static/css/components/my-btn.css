@@ -1,0 +1,21 @@
+.my-btn {
+    background-color: #333333; /* 按钮背景为黑色 */
+    color: #98FF98; /* 按钮文字为薄荷绿 */
+    border: 2px solid #98FF98; /* 按钮边框为薄荷绿 */
+    font-size: 14px; /* 缩小字体大小 */
+    border-radius: 6px; /* 边角圆润，稍微缩小 */
+    padding: 8px 16px; /* 内边距稍微缩小 */
+    transition: all 0.3s ease; /* 平滑过渡 */
+}
+
+/* 按钮鼠标悬停效果 */
+.my-btn:hover {
+    background-color: #98FF98; /* 背景变为薄荷绿 */
+    color: #000000; /* 文字变为黑色 */
+    border-color: #333333; /* 边框变为黑色 */
+}
+
+/* 按钮点击效果 */
+.my-btn:active {
+    transform: scale(0.98); /* 按钮点击时轻微缩小 */
+}
