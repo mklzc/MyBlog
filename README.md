@@ -66,3 +66,8 @@ python run.py
 ### 注册服务
 
 Windows 下可以使用 nssm 注册 caddy 和 run.py 为服务，Linux 使用 systemctl 即可。
+
+## TODO
+
+1. 文章标签分类
+2. 支持文章搜索
