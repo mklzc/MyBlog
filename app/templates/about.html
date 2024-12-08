@@ -1,13 +1,50 @@
 {% extends 'base.html' %}
 {% block title %}About - lzc's blog{% endblock %}
 
+{% block head %}
+    <style>
+    </style>
+{% endblock %}
+
 {% block content %}
-    <section class="hero bg-light text-center py-5">
+    <section class="text-center py-5">
         <div class="container">
-            <h2 class="display-4 text-primary">Welcome to Lzc's Blog</h2>
-            <p class="lead text-muted">A space where ideas blossom. Explore, read, and share your thoughts with the
-                world.</p>
-            <a href="{% url 'index' %}" class="btn btn-success btn-lg">Explore Blog</a>
+            <h2 class="display-4">欢迎来到 lzc 的博客</h2>
+            <a class="md-source" data-md-component="source" href="https://github.com/mklzc/MyBlog" target="_blank"
+               title="前往仓库">
+                <div class="md-icon md-source__icon">
+                    <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path>
+                    </svg>
+                </div>
+                <div class="md-source__repository md-source__repository--active">OI-wiki/OI-wiki
+                    <ul class="md-source__facts">
+                        <li class="md-source__fact md-source__fact--stars">21.5k</li>
+                        <li class="md-source__fact md-source__fact--forks">4k</li>
+                    </ul>
+                </div>
+            </a>
+            <a href="https://github.com/mklzc/MyBlog" target="_blank">
+                <img alt="GitHub watchers"
+                     src="https://img.shields.io/github/watchers/mklzc/MyBlog.svg?style=social&amp;label=Watch">
+            </a>
+            <a href="https://github.com/mklzc/MyBlog" target="_blank">
+                <img alt="GitHub stars"
+                     src="https://img.shields.io/github/stars/mklzc/MyBlog.svg?style=social&amp;label=Stars">
+            </a>
+            <br>
+            <br>
+            <a href="https://ipw.cn/ipv6webcheck/?site=blog.asyncerror.top" title="本站支持IPv6访问"
+               target='_blank'><img
+                    style='display:inline-block;vertical-align:middle' alt="本站支持IPv6访问"
+                    src="https://static.ipw.cn/icon/ipv6-s1.svg"></a>
+            <a href="https://ipw.cn/ssl/?site=blog.asyncerror.top" title="本站支持SSL安全访问" target='_blank'><img
+                    style='display:inline-block;vertical-align:middle' alt="本站支持SSL安全访问"
+                    src="https://static.ipw.cn/icon/ssl-s2.svg"></a>
+            <br>
+            <br>
+            <a href="https://www.cnblogs.com/mklzc" class="my-btn" target="_blank">我的OI博客（停止更新）</a>s
         </div>
+        <br>
     </section>
 {% endblock %}

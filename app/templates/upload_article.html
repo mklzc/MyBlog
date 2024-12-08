@@ -6,7 +6,7 @@
 {% block content %}
     <section id="create-post" class="my-5">
         <div class="container">
-            <h3 class="text-center mb-4 text-primary">发布新文章</h3>
+            <h3 class="text-center mb-4">发布新文章</h3>
 
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
@@ -54,8 +54,8 @@
 
                 <!-- 提交按钮 -->
                 <div class="d-flex justify-content-between">
-                    <button type="submit" class="btn btn-success btn-lg">发布文章</button>
-                    <a href="{% url 'user-post-list' request.user.username %}" class="btn btn-secondary btn-lg">取消</a>
+                    <a href="{% url 'user-post-list' request.user.username %}" class="btn my-btn">取消</a>
+                    <button type="submit" class="btn my-btn">发布文章</button>
                 </div>
             </form>
         </div>
