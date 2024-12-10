@@ -4,12 +4,12 @@ import markdown
 from django.contrib.auth.hashers import make_password
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, UpdateView, DeleteView
 
 from app.forms import RegisterForm, LoginForm, PostForm, UserProfileForm, CommentForm
-from app.models import BlogPost, UserProfile, Comment
+from app.models import BlogPost, UserProfile, Comment, CategoryPost
 from django.contrib.auth import logout, authenticate, login, get_user_model
 
 User = get_user_model()
@@ -95,7 +95,7 @@ def post_view(request, post_id):
 
     print(comments)
 
-    return render(request, 'post_view.html', {'post': post, 'content_html': content_html, 'userprofile': userprofile, 'comments': comments})
+    return render(request, 'blog/post_view.html', {'post': post, 'content_html': content_html, 'userprofile': userprofile, 'comments': comments})
 
 
 # 用户注册页面
@@ -153,7 +153,7 @@ def user_profile(request, username):
     print(user)
     profile = UserProfile.objects.filter(user=user).first()
     posts = BlogPost.objects.filter(author=username)
-    return render(request, 'user_profile.html', {'profile': profile, 'user': user, 'posts': posts})
+    return render(request, 'user_profile.html', {'profile': profile, 'user_in_profile': user, 'posts': posts})
 
 
 def edit_profile(request):
@@ -180,6 +180,10 @@ class UserPostListView(ListView):
         username = self.kwargs.get('name')
         return BlogPost.objects.filter(author=username).order_by('-posted')
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['username'] = self.kwargs.get('name')
+        return context
 
 class PostEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = BlogPost
@@ -206,3 +210,8 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def test_func(self):
         post = self.get_object()
         return post.author == self.request.user.username
+
+def category_post(request, slug):
+    category = get_object_or_404(CategoryPost, slug=slug)
+    posts = category.posts.all()
+    return render(request, '')

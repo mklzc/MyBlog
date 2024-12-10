@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47151076-780a-4ed8-9da4-e35a227e29ab" name="更改" comment="debug=False">
+    <list default="true" id="47151076-780a-4ed8-9da4-e35a227e29ab" name="更改" comment="Update">
+      <change afterPath="$PROJECT_DIR$/app/templates/blog/category.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBlog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyBlog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/post_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/blog/post_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/user_posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user_posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -50,7 +54,7 @@
     &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lzc/PycharmProjects/MyBlog/app/static/img&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/CodeSpace/Python&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -73,6 +77,7 @@
       <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app\templates\blog" />
       <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app\static\css\components" />
       <recent name="C:\Users\lzc\PycharmProjects\MyBlog" />
       <recent name="C:\Users\lzc\PycharmProjects\MyBlog\media" />
@@ -167,7 +172,10 @@
       <workItem from="1733320205283" duration="1704000" />
       <workItem from="1733322122999" duration="7425000" />
       <workItem from="1733357786685" duration="6427000" />
-      <workItem from="1733622672741" duration="8797000" />
+      <workItem from="1733622672741" duration="11833000" />
+      <workItem from="1733648156631" duration="2580000" />
+      <workItem from="1733743743400" duration="395000" />
+      <workItem from="1733828668983" duration="5466000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -233,7 +241,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733629895592</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update TODO">
+      <option name="closed" value="true" />
+      <created>1733631536074</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733631536074</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update">
+      <option name="closed" value="true" />
+      <created>1733631551397</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733631551397</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,11 +277,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Add" />
-    <MESSAGE value="Update" />
     <MESSAGE value="Upload README.md" />
     <MESSAGE value="Upload requirements.txt" />
     <MESSAGE value="debug=False" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug=False" />
+    <MESSAGE value="Update TODO" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MyBlog$run.coverage" NAME="run 覆盖结果" MODIFIED="1733049852382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -3,13 +3,21 @@ from django.contrib.auth.models import PermissionsMixin
 from django.db import models
 from django.urls import reverse
 
+class CategoryPost(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
+
 class BlogPost(models.Model):
     title = models.CharField(max_length=100, unique=True)
     author = models.CharField(max_length=100)
     comments_count = models.IntegerField(default=0)
-    # slug = models.SlugField(max_length=100, unique=True)
     body = models.TextField()
     posted = models.DateTimeField(db_index=True, auto_now_add=True)
+    category = models.ForeignKey(CategoryPost, on_delete=models.CASCADE, related_name='posts', blank=True, null=True)
+
     def __unicode__(self):
         return '%s' % self.title
 

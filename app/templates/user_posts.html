@@ -11,8 +11,7 @@
 {% block content %}
     <section id="blog-posts">
         <div class="container">
-            <h3 class="text-center mb-5">{{ request.user.username }}的文章列表</h3>
-
+            <h3 class="text-center mb-5">{{ username }}的文章列表</h3>
             <div class="row">
                 {% for post in posts %}
                     <div class="col-md-4 mb-4">
