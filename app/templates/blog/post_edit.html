@@ -37,6 +37,10 @@
                         </div>
                     {% endif %}
                 </div>
+                <div class="mb-3">
+                    <label for="id_category" class="form-label">Select Existing Category</label>
+                    {{ form.category }}
+                </div>
 
                 <div class="d-flex justify-content-between">
                     <a href="{% url 'user-post-list' request.user.username %}" class="btn btn-secondary btn-lg">取消</a>

@@ -4,6 +4,7 @@ import markdown
 from django.contrib.auth.hashers import make_password
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, UpdateView, DeleteView
@@ -18,12 +19,6 @@ User = get_user_model()
 def root_page(request):
     return redirect('index')
 
-
-def index(request):
-    posts = BlogPost.objects.all()[:6]
-    return render(request, 'index.html', {'posts': posts})
-
-
 class IndexView(ListView):
     model = BlogPost
     template_name = 'index.html'
@@ -33,6 +28,10 @@ class IndexView(ListView):
     def get_queryset(self):
         return BlogPost.objects.all().order_by('-posted')
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["categories"] = CategoryPost.objects.all()
+        return context
 
 def logout_view(request):
     logout(request)
@@ -56,7 +55,7 @@ def login_view(request):
             messages.error(request, 'Invalid Email or password.')
     else:
         form = LoginForm()
-    return render(request, 'login.html', {'form': form})
+    return render(request, 'user/login.html', {'form': form})
 
 
 def contact_view(request):
@@ -120,10 +119,10 @@ def register_view(request):
             for field, errors in form.errors.items():
                 for error in errors:
                     messages.error(request, error)
-            return render(request, 'register.html', {'form': form})
+            return render(request, 'user/register.html', {'form': form})
     else:
         form = RegisterForm()
-        return render(request, 'register.html', {'form': form})
+        return render(request, 'user/register.html', {'form': form})
 
 
 def upload_article(request):
@@ -141,7 +140,7 @@ def upload_article(request):
             return redirect('/index')
     else:
         form = PostForm()
-    return render(request, 'upload_article.html', {'form': form})
+    return render(request, 'blog/upload_article.html', {'form': form})
 
 
 def about(request):
@@ -153,7 +152,7 @@ def user_profile(request, username):
     print(user)
     profile = UserProfile.objects.filter(user=user).first()
     posts = BlogPost.objects.filter(author=username)
-    return render(request, 'user_profile.html', {'profile': profile, 'user_in_profile': user, 'posts': posts})
+    return render(request, 'user/user_profile.html', {'profile': profile, 'user_in_profile': user, 'posts': posts})
 
 
 def edit_profile(request):
@@ -167,12 +166,12 @@ def edit_profile(request):
             return redirect(profile.get_absolute_url())
     else:
         form = UserProfileForm(instance=profile)
-    return render(request, 'edit_profile.html', {'form': form, 'profile': profile})
+    return render(request, 'user/edit_profile.html', {'form': form, 'profile': profile})
 
 
 class UserPostListView(ListView):
     model = BlogPost
-    template_name = 'user_posts.html'
+    template_name = 'user/user_posts.html'
     context_object_name = 'posts'
     paginate_by = 6
 
@@ -187,9 +186,9 @@ class UserPostListView(ListView):
 
 class PostEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = BlogPost
-    fields = ['title', 'body']
+    fields = ['title', 'body', 'category']
     context_object_name = 'post'
-    template_name = 'post_edit.html'
+    template_name = 'blog/post_edit.html'
 
     def get_success_url(self):
         return reverse_lazy('user-post-list', kwargs={'name': self.request.user.username})
@@ -211,7 +210,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         post = self.get_object()
         return post.author == self.request.user.username
 
-def category_post(request, slug):
-    category = get_object_or_404(CategoryPost, slug=slug)
+def category_post(request, category_id):
+    category = get_object_or_404(CategoryPost, id=category_id)
     posts = category.posts.all()
-    return render(request, '')
+    return render(request, 'blog/category.html', {'posts': posts, 'category': category})

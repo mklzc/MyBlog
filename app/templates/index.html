@@ -11,6 +11,13 @@
 {% block content %}
 
     <section id="blog-posts">
+        <h2>文章分类</h2>
+        <ul>
+            {% for category in categories %}
+                <li><a href="{% url 'category-posts' category.id %}"> {{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
+
         <div class="container">
             <h3 class="text-center mb-4">最新文章</h3>
             <div class="row">

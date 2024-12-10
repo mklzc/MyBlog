@@ -1,6 +1,10 @@
-<h1>分类：{{ category.name }}</h1>
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>分类：{{ category.name }}</h2>
 <ul>
     {% for post in posts %}
-        <li><a href="{{  }}">{{ post.title }}</a></li>
+        <li><a href="{% url 'post-view' post.id %}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>
+{% endblock %}

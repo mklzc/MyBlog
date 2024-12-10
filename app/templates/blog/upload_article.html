@@ -39,6 +39,16 @@
                     {% endif %}
                 </div>
 
+                <div class="mb-3">
+                    <label for="id_category" class="form-label">Select Existing Category</label>
+                    {{ form.category }}
+                </div>
+                <div class="mb-3">
+                    <label for="id_category_name" class="form-label">Or Create New Category</label>
+                    {{ form.category_name }}
+                </div>
+
+
 {#                <!-- 文章封面图片 -->#}
 {#                <div class="mb-4">#}
 {#                    <label for="id_image" class="form-label">文章封面</label>#}
