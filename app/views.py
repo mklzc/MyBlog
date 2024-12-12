@@ -1,10 +1,8 @@
-import re
-
 import markdown
 from django.contrib.auth.hashers import make_password
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.http import HttpResponse
+
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import ListView, UpdateView, DeleteView
@@ -210,7 +208,17 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         post = self.get_object()
         return post.author == self.request.user.username
 
-def category_post(request, category_id):
-    category = get_object_or_404(CategoryPost, id=category_id)
-    posts = category.posts.all()
-    return render(request, 'blog/category.html', {'posts': posts, 'category': category})
+
+class CategoryView(ListView):
+    model = CategoryPost
+    template_name = 'blog/category.html'
+    category = get_object_or_404(CategoryPost, id=1)
+    context_object_name = 'posts'
+    paginate_by = 6
+    def get_queryset(self):
+        return self.category.posts.all()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['category'] = self.category
+        return context

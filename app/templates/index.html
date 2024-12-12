@@ -11,12 +11,22 @@
 {% block content %}
 
     <section id="blog-posts">
-        <h2>文章分类</h2>
-        <ul>
+        <div class="container">
+        <h3 class="text-center mb-4">文章分类</h3>
+        <div class="row justify-content-center">
             {% for category in categories %}
-                <li><a href="{% url 'category-posts' category.id %}"> {{ category.name }}</a></li>
+                <div class="col-md-2 mb-2">
+                <div class="card my-card">
+                    <a href="{% url 'category-posts' category.id %}" class="category-link">
+                        <div class="card-body">
+                            <h5 class="text-light text-center">{{ category.name }}</h5>
+                        </div>
+                    </a>
+                </div>
+                </div>
             {% endfor %}
-        </ul>
+        </div>
+        </div>
 
         <div class="container">
             <h3 class="text-center mb-4">最新文章</h3>

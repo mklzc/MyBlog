@@ -5,7 +5,6 @@ from django.urls import reverse
 
 class CategoryPost(models.Model):
     name = models.CharField(max_length=100, unique=True, default="未分类")
-    slug = models.SlugField(max_length=100, unique=True)
 
     def __str__(self):
         return self.name
