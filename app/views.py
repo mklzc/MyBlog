@@ -2,6 +2,7 @@ import markdown
 from django.contrib.auth.hashers import make_password
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.db import models
 
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
@@ -216,8 +217,6 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 class CategoryView(ListView):
     model = BlogPost
     template_name = 'blog/category.html'
-
-
     context_object_name = 'posts'
     paginate_by = 6
 
@@ -234,3 +233,15 @@ class CategoryView(ListView):
 
 class PostSearchView(ListView):
     model = BlogPost
+    template_name = 'search.html'
+    context_object_name = 'posts'
+    paginate_by = 6
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        if query is not None:
+            return BlogPost.objects.filter(
+                models.Q(title__icontains=query) |
+                models.Q(body__icontains=query)
+            ).order_by('-posted')
+        return BlogPost.objects.all().order_by('-posted')

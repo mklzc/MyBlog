@@ -20,7 +20,7 @@ from django.urls import path
 from app import views
 from django.conf.urls.static import static
 
-from app.views import UserPostListView, PostDeleteView, PostEditView, IndexView, CategoryView
+from app.views import UserPostListView, PostDeleteView, PostEditView, IndexView, CategoryView, PostSearchView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -39,6 +39,7 @@ urlpatterns = [
     path('post/<int:pk>/edit/', PostEditView.as_view(), name='post-edit'),  # 编辑文章
     path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),  # 删除文章
     path('category/<int:category_id>', CategoryView.as_view(), name='category-posts'),
+    path('search_list/', PostSearchView.as_view(), name='search-list'),
 ]
 
 if settings.DEBUG:

@@ -27,6 +27,9 @@ body {
     color: #333;
     line-height: 1.6;
     padding-top: 60px; /* 留出顶部导航栏空间 */
+    display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center;
 }
 
 a {

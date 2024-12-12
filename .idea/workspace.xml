@@ -4,10 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47151076-780a-4ed8-9da4-e35a227e29ab" name="更改" comment="优化了UI界面">
+    <list default="true" id="47151076-780a-4ed8-9da4-e35a227e29ab" name="更改" comment="修复了已知bug">
+      <change afterPath="$PROJECT_DIR$/app/static/css/page/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBlog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyBlog/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBlog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyBlog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/page/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/post-view.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/page/post-view.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/register_and_login_form.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/page/register_and_login_form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/page/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/upload_article_form.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/page/upload_article_form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/user_post.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/page/user_post.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/blog/post_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/blog/post_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/contact_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/contact_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,11 +87,11 @@
       <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app\static\css\page" />
+      <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app\static\css\components" />
       <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app\templates\user" />
       <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app\templates\blog" />
-      <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app\static\css\components" />
       <recent name="C:\Users\lzc\PycharmProjects\MyBlog" />
-      <recent name="C:\Users\lzc\PycharmProjects\MyBlog\media" />
     </key>
   </component>
   <component name="RunManager" selected="Django 服务器.MyBlog">
@@ -174,7 +188,8 @@
       <workItem from="1733743743400" duration="395000" />
       <workItem from="1733828668983" duration="15886000" />
       <workItem from="1733967043057" duration="595000" />
-      <workItem from="1733968544617" duration="4404000" />
+      <workItem from="1733968544617" duration="7508000" />
+      <workItem from="1734009992427" duration="3273000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -280,7 +295,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733973592136</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="优化UI">
+      <option name="closed" value="true" />
+      <created>1733974161500</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1733974161500</updated>
+    </task>
+    <task id="LOCAL-00015" summary="修复了已知bug">
+      <option name="closed" value="true" />
+      <created>1733974912387</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1733974912387</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +339,9 @@
     <MESSAGE value="修复了已知问题" />
     <MESSAGE value="添加文章分类功能" />
     <MESSAGE value="优化了UI界面" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化了UI界面" />
+    <MESSAGE value="优化UI" />
+    <MESSAGE value="修复了已知bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复了已知bug" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MyBlog$run.coverage" NAME="run 覆盖结果" MODIFIED="1733049852382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
