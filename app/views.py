@@ -214,16 +214,23 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return post.author == self.request.user.username
 
 class CategoryView(ListView):
-    model = CategoryPost
+    model = BlogPost
     template_name = 'blog/category.html'
-    category = get_object_or_404(CategoryPost, id=1)
+
+
     context_object_name = 'posts'
     paginate_by = 6
 
     def get_queryset(self):
-        return self.category.posts.all()
+        category_id = self.kwargs.get('category_id')
+        category = get_object_or_404(CategoryPost, id=category_id)
+        return category.posts.order_by('-posted')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['category'] = self.category
+        category_id = self.kwargs.get('category_id')
+        context['category'] = get_object_or_404(CategoryPost, id=category_id)
         return context
+
+class PostSearchView(ListView):
+    model = BlogPost
