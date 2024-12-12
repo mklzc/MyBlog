@@ -124,6 +124,28 @@
     {% else %}
         <p>Please <a href="{% url 'login' %}">log in</a> to leave a comment.</p>
     {% endif %}
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">确认删除文章</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    您确定要删除这篇文章吗？<br>
+                    <strong id="postTitle"></strong>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <form id="deleteForm" method="POST" action="{% url 'post-delete' 0 %}">
+                        {% csrf_token %}
+                        <input type="hidden" id="postId" name="post_id">
+                        <button type="submit" class="btn my-btn">确认删除</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
 
