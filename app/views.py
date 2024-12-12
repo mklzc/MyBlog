@@ -17,6 +17,7 @@ User = get_user_model()
 def root_page(request):
     return redirect('index')
 
+
 class IndexView(ListView):
     model = BlogPost
     template_name = 'index.html'
@@ -30,6 +31,7 @@ class IndexView(ListView):
         context = super().get_context_data(**kwargs)
         context["categories"] = CategoryPost.objects.all()
         return context
+
 
 def logout_view(request):
     logout(request)
@@ -90,9 +92,11 @@ def post_view(request, post_id):
                                      })
     comments = Comment.objects.filter(post_id=post_id)
 
-    print(comments)
-
-    return render(request, 'blog/post_view.html', {'post': post, 'content_html': content_html, 'userprofile': userprofile, 'comments': comments})
+    return render(request, 'blog/post_view.html',
+                  {'post': post,
+                        'content_html': content_html,
+                        'userprofile': userprofile,
+                        'comments': comments})
 
 
 # 用户注册页面
@@ -182,6 +186,7 @@ class UserPostListView(ListView):
         context['username'] = self.kwargs.get('name')
         return context
 
+
 class PostEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = BlogPost
     fields = ['title', 'body', 'category']
@@ -208,13 +213,13 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         post = self.get_object()
         return post.author == self.request.user.username
 
-
 class CategoryView(ListView):
     model = CategoryPost
     template_name = 'blog/category.html'
     category = get_object_or_404(CategoryPost, id=1)
     context_object_name = 'posts'
     paginate_by = 6
+
     def get_queryset(self):
         return self.category.posts.all()
 

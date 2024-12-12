@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47151076-780a-4ed8-9da4-e35a227e29ab" name="更改" comment="添加文章分类功能">
+    <list default="true" id="47151076-780a-4ed8-9da4-e35a227e29ab" name="更改" comment="优化了UI界面">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBlog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyBlog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBlog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyBlog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/blog/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/blog/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/blog/post_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/blog/post_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/blog/post_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/blog/post_view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +174,7 @@
       <workItem from="1733743743400" duration="395000" />
       <workItem from="1733828668983" duration="15886000" />
       <workItem from="1733967043057" duration="595000" />
-      <workItem from="1733968544617" duration="3839000" />
+      <workItem from="1733968544617" duration="4404000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -276,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733841814181</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="优化了UI界面">
+      <option name="closed" value="true" />
+      <created>1733973592136</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1733973592136</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +307,8 @@
     <MESSAGE value="Update" />
     <MESSAGE value="修复了已知问题" />
     <MESSAGE value="添加文章分类功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加文章分类功能" />
+    <MESSAGE value="优化了UI界面" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化了UI界面" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MyBlog$run.coverage" NAME="run 覆盖结果" MODIFIED="1733049852382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
