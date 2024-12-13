@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/components/my-btn.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
     {#    <script type="text/javascript" async src="{% static 'js/mathjax/tex-chtml-full.js' %}"></script>#}
-{#    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>#}
+    {#    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>#}
     {% block head %}{% endblock %}
 </head>
 <body>
@@ -43,6 +43,19 @@
                             <a class="nav-link {% if request.path == '/upload/' %}active{% endif %}" href="/upload/">Upload</a>
                         </li>
                     </ul>
+                    <div class="navbar-nav ms-auto">
+                        <form method="get" action="{% url 'search-list' %}" class="search-container">
+                            <label>
+                                <input
+                                        type="text"
+                                        name="q"
+                                        class="search-input"
+                                        placeholder="输入关键词"
+                                        value="{{ request.GET.q }}">
+                            </label>
+                            <button type="submit" class="search-button">Search</button>
+                        </form>
+                    </div>
                     <ul class="navbar-nav ms-auto">
                         {% if user.is_authenticated %}
                             <li class="nav-item">

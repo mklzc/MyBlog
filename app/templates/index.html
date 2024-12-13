@@ -12,20 +12,6 @@
 {% block content %}
 
     <section id="blog-posts">
-
-        <div class="justify-content-center mb-4">
-            <form method="get" action="{% url 'search-list' %}" class="search-container">
-                <label>
-                    <input
-                            type="text"
-                            name="q"
-                            class="search-input"
-                            placeholder=""
-                            value="{{ request.GET.q }}">
-                </label>
-                <button type="submit" class="search-button">Search</button>
-            </form>
-        </div>
         <div class="container">
             <h3 class="text-center mb-4">文章分类</h3>
             <div class="row justify-content-center">
