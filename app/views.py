@@ -195,7 +195,7 @@ class PostEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     template_name = 'blog/post_edit.html'
 
     def get_success_url(self):
-        return reverse_lazy('user-post-list', kwargs={'name': self.request.user.username})
+        return reverse_lazy('post-view', kwargs={'post_id': self.get_object().id})
 
     # UserPassesTestMixin：验证用户权限
     def test_func(self):
