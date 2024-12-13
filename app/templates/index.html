@@ -30,7 +30,9 @@
         </div>
 
         <div class="container">
+            {% if page_obj.number == 1 %}
             <h3 class="text-center mb-4">最新文章</h3>
+            {% endif %}
             <div class="row">
                 {% for post in posts %}
                     <div class="col-md-4 mb-4">

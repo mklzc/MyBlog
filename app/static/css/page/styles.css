@@ -111,7 +111,7 @@ a:hover {
         font-size: 14px;
     }
 
-    form {
+    .navbar-nav form {
         padding: 20px;
     }
 }

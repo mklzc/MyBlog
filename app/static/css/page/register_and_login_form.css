@@ -1,5 +1,5 @@
 /* 注册登录表单样式 */
-form {
+.user-form form {
     max-width: 400px;
     margin: 0 auto;
     padding: 30px;
@@ -9,38 +9,32 @@ form {
     border: 1px solid #e0e0e0;
 }
 
-form input,
-form button {
+.user-form form button {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
     border: 1px solid #ddd;
     font-size: 16px;
-    color: #333;
-}
-
-form input:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-form button {
     background-color: #007bff;
     color: white;
-    border: none;
+    /*border: none;*/
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-form button:hover {
+.user-form form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.user-form form button:hover {
     background-color: #0056b3;
 }
 
 /* 输入框样式 */
-input[type=""]
-input[type="text"],
-input[type="password"] {
+.user-form input[type="text"],
+.user-form input[type="password"] {
     font-size: 16px;
     background-color: #fafafa;
 }
