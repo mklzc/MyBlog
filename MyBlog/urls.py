@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from app import views
 from django.conf.urls.static import static
 
@@ -40,6 +40,7 @@ urlpatterns = [
     path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),  # 删除文章
     path('category/<int:category_id>', CategoryView.as_view(), name='category-posts'),
     path('search_list/', PostSearchView.as_view(), name='search-list'),
+    path("accounts/", include("allauth.urls")),
 ]
 
 if settings.DEBUG:

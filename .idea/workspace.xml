@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47151076-780a-4ed8-9da4-e35a227e29ab" name="更改" comment="Update README.md">
+    <list default="true" id="47151076-780a-4ed8-9da4-e35a227e29ab" name="更改" comment="修复了css样式冲突">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyBlog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyBlog/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyBlog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyBlog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,45 +41,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django 服务器.MyBlog.executor&quot;: &quot;Run&quot;,
-    &quot;Python.run.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/CodeSpace/Python&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django 服务器.MyBlog.executor": "Run",
+    "Python.run.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/lzc/PycharmProjects/MyBlog/app",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "terminal",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app" />
       <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app\static\img" />
       <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app\static\js" />
-      <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lzc\PycharmProjects\MyBlog" />
+      <recent name="C:\Users\lzc\PycharmProjects\MyBlog\MyBlog" />
       <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app\static\css\page" />
       <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app\static\css\components" />
       <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app\templates\user" />
-      <recent name="C:\Users\lzc\PycharmProjects\MyBlog\app\templates\blog" />
-      <recent name="C:\Users\lzc\PycharmProjects\MyBlog" />
     </key>
   </component>
   <component name="RunManager" selected="Django 服务器.MyBlog">
@@ -173,7 +177,13 @@
       <workItem from="1733828668983" duration="15886000" />
       <workItem from="1733967043057" duration="595000" />
       <workItem from="1733968544617" duration="7508000" />
-      <workItem from="1734009992427" duration="4282000" />
+      <workItem from="1734009992427" duration="8707000" />
+      <workItem from="1734094707799" duration="7167000" />
+      <workItem from="1734160930700" duration="3797000" />
+      <workItem from="1734164774860" duration="169000" />
+      <workItem from="1734164951636" duration="69000" />
+      <workItem from="1734165028487" duration="13406000" />
+      <workItem from="1734247067054" duration="3445000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -319,11 +329,54 @@
       <option name="project" value="LOCAL" />
       <updated>1734015010275</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="修复已知bug">
+      <option name="closed" value="true" />
+      <created>1734015353653</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1734015353653</updated>
+    </task>
+    <task id="LOCAL-00020" summary="添加favicon">
+      <option name="closed" value="true" />
+      <created>1734095016863</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1734095016863</updated>
+    </task>
+    <task id="LOCAL-00021" summary="优化页面跳转逻辑">
+      <option name="closed" value="true" />
+      <created>1734096353004</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1734096353004</updated>
+    </task>
+    <task id="LOCAL-00022" summary="优化">
+      <option name="closed" value="true" />
+      <created>1734098698836</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1734098698836</updated>
+    </task>
+    <task id="LOCAL-00023" summary="修复了css样式冲突">
+      <option name="closed" value="true" />
+      <created>1734100817801</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1734100817801</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -350,9 +403,13 @@
     <MESSAGE value="优化UI" />
     <MESSAGE value="修复了已知bug" />
     <MESSAGE value="添加文章搜索功能" />
-    <MESSAGE value="修复已知bug" />
     <MESSAGE value="Update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
+    <MESSAGE value="修复已知bug" />
+    <MESSAGE value="添加favicon" />
+    <MESSAGE value="优化页面跳转逻辑" />
+    <MESSAGE value="优化" />
+    <MESSAGE value="修复了css样式冲突" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复了css样式冲突" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MyBlog$run.coverage" NAME="run 覆盖结果" MODIFIED="1733049852382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
