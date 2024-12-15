@@ -19,7 +19,7 @@ pip install -r requirements.txt
 
 ### 数据库配置
 
-在服务器上创建一个叫 "BlogDB" Mysql 数据库，然后在项目的根目录下创建 `.env` 文件
+在服务器上创建一个叫 Mysql 数据库，然后在项目的根目录下创建 `.env` 文件
 
 ```text
 DEBUG=on
