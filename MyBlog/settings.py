@@ -10,20 +10,28 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
+import environ
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# 使用 django-environ 管理环境变量
+env = environ.Env(
+    DEBUG=(bool, True)
+)
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-=nmxx$1i(qqv+jsyaq3y99(b5e@bv2ibd(=a&7c)7wu1belq6i'
+SECRET_KEY = env('SECRET_KEY')
+
+print(SECRET_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = ['*', ]
 
@@ -38,6 +46,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_mathjax',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.github",
     'app',
 ]
 
@@ -49,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = 'MyBlog.urls'
@@ -81,7 +95,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'BlogDB',
         'USER': 'root',
-        'PASSWORD': 'root123',
+        'PASSWORD': 'lzc061002',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
@@ -141,3 +155,23 @@ CORS_ALLOWED_ORIGINS = [
 CSRF_TRUSTED_ORIGINS = [
     'https://blog.asyncerror.top',
 ]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = "index"
+ACCOUNT_LOGOUT_REDIRECT_URL = "home"
+ACCOUNT_EMAIL_VERIFICATION = "none"
+
+SOCIALACCOUNT_PROVIDERS = {
+    "github": {
+        "VERIFIED_EMAIL": True,
+        "APP": {
+            "client_id": env('GITHUB_CLIENT_ID'),
+            "secret": env('GITHUB_CLIENT_SECRET'),
+        },
+    },
+}
