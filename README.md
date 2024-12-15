@@ -19,21 +19,24 @@ pip install -r requirements.txt
 
 ### 数据库配置
 
-在服务器上创建一个 Mysql 数据库，然后修改 setting.py 中 DATABASES 中的参数。
+在服务器上创建一个叫 "BlogDB" Mysql 数据库，然后在项目的根目录下创建 `.env` 文件
 
-```python
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'BlogDB',
-        'USER': 'root',
-        'PASSWORD': 'root123',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-    }
-}
+```text
+DEBUG=on
+
+SECRET_KEY=
+
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+
+DATABASE_PASSWORD=
+DATABASE_NAME=
+DATABASE_USER=
 ```
 
+其中 `GITHUB_CLIENT_ID` 和 `GITHUB_CLIENT_SECRET` 为实现 Github 第三方登录所需内容。
+
+在 https://github.com/settings/developers 生成你的 Oauth App 即可获得以上的值。
 
 ### Caddy + Waitress
 
@@ -71,4 +74,5 @@ Windows 下可以使用 nssm 注册 caddy 和 run.py 为服务，Linux 使用 sy
 
 1. &#x2705; 文章分类 2024-12-10
 2. &#x2705; 支持文章搜索 2024-12-12
-3. &#9744; 文章标签
+3. &#x2705; GitHub第三方登录
+4. &#9744; 文章标签

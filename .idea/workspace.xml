@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47151076-780a-4ed8-9da4-e35a227e29ab" name="更改" comment="修复了css样式冲突">
+    <list default="true" id="47151076-780a-4ed8-9da4-e35a227e29ab" name="更改" comment="Update with environ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBlog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyBlog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyBlog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyBlog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +179,7 @@
       <workItem from="1734164774860" duration="169000" />
       <workItem from="1734164951636" duration="69000" />
       <workItem from="1734165028487" duration="13406000" />
-      <workItem from="1734247067054" duration="3445000" />
+      <workItem from="1734247067054" duration="4307000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -369,7 +365,31 @@
       <option name="project" value="LOCAL" />
       <updated>1734100817801</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="实现GitHub第三方登录">
+      <option name="closed" value="true" />
+      <created>1734250620304</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1734250620304</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Update with environ">
+      <option name="closed" value="true" />
+      <created>1734250631573</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1734250631573</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Update with environ">
+      <option name="closed" value="true" />
+      <created>1734251040786</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1734251040786</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +429,9 @@
     <MESSAGE value="优化页面跳转逻辑" />
     <MESSAGE value="优化" />
     <MESSAGE value="修复了css样式冲突" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复了css样式冲突" />
+    <MESSAGE value="实现GitHub第三方登录" />
+    <MESSAGE value="Update with environ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update with environ" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MyBlog$run.coverage" NAME="run 覆盖结果" MODIFIED="1733049852382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
