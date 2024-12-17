@@ -31,6 +31,22 @@
             <br>
             <a href="https://www.cnblogs.com/mklzc" class="my-btn" target="_blank">我的OI博客（停止更新）</a>
             <a href="https://github.com/mklzc/MyBlog/blob/main/README.md" class="my-btn" target="_blank">README</a>
+            <br>
+            <br>
+            <button class="my-btn" onclick="copyToClipBoard()">本站RSS订阅链接：https://blog.asyncerror.top/rss</button>
+            <p id="copyMessage" style="color: green;"></p>
+            <script>
+                function copyToClipBoard() {
+                    const copyText = "https://blog.asyncerror.top/rss";
+                    console.error(copyText)
+                    navigator.clipboard.writeText(copyText).then(() => {
+                        document.getElementById("copyMessage").innerText = "复制成功！";
+                    }).catch(err => {
+                        console.error("复制失败:", err);
+                        document.getElementById("copyMessage").innerText = "复制失败，请重试！";
+                    });
+                }
+            </script>
         </div>
         <br>
     </section>
