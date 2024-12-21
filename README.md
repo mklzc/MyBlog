@@ -4,8 +4,9 @@
 
 ## Features
 
-1. 支持 Markdown 和 Latex 渲染
-2. 支持评论，用户注册，文章管理等基本功能
+1. 支持评论，用户注册，文章管理等基本功能
+2. 支持 Markdown 和 Latex 渲染
+3. 支持 RSS 订阅
 
 ## 部署指南（Mysql + Waitress + Caddy）
 
@@ -19,7 +20,7 @@ pip install -r requirements.txt
 
 ### 数据库配置
 
-在服务器上创建一个叫 Mysql 数据库，然后在项目的根目录下创建 `.env` 文件
+在服务器上创建一个 Mysql 数据库，然后在项目的根目录下创建 `.env` 文件
 
 ```text
 DEBUG=on
