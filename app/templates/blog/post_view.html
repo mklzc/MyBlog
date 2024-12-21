@@ -93,7 +93,7 @@
     <hr>
     {% if comments %}
         <div class="comments-section">
-            <h3>Comments ({{ post.comments_count }})</h3>
+            <h3>Comments ({{ comment_count }})</h3>
             {% for comment in comments %}
                 <div class="comment">
                     <a href="{% url 'user-profile' comment.user %}"><strong>{{ comment.user }}</strong></a>

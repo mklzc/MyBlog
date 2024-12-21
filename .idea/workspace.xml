@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47151076-780a-4ed8-9da4-e35a227e29ab" name="更改" comment="修复已知Bug">
+    <list default="true" id="47151076-780a-4ed8-9da4-e35a227e29ab" name="更改" comment="实现Markdown代码高亮">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/blog/post_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/blog/post_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +182,7 @@
       <workItem from="1734165028487" duration="13406000" />
       <workItem from="1734247067054" duration="14148000" />
       <workItem from="1734441329403" duration="4173000" />
-      <workItem from="1734751544634" duration="2152000" />
+      <workItem from="1734751544634" duration="2625000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -455,7 +456,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734753068924</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="实现Markdown代码高亮">
+      <option name="closed" value="true" />
+      <created>1734753758971</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1734753758971</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +485,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial commit" />
     <MESSAGE value="Add" />
     <MESSAGE value="Upload README.md" />
     <MESSAGE value="Upload requirements.txt" />
@@ -501,7 +509,8 @@
     <MESSAGE value="添加RSS订阅功能" />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="修复已知Bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复已知Bug" />
+    <MESSAGE value="实现Markdown代码高亮" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现Markdown代码高亮" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MyBlog$run.coverage" NAME="run 覆盖结果" MODIFIED="1733049852382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

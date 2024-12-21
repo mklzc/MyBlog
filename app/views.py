@@ -67,8 +67,8 @@ def post_view(request, post_id):
     post = BlogPost.objects.get(id=post_id)
     if request.method == 'POST':
         form = CommentForm(data=request.POST)
-        print(request.POST)
-        print(form.is_valid())
+
+
         if form.is_valid():
             comment = form.save(commit=False)
             comment.user = request.user
@@ -92,12 +92,14 @@ def post_view(request, post_id):
                                          }
                                      })
     comments = Comment.objects.filter(post_id=post_id)
+    comment_count = Comment.objects.filter(post_id=post).count()
 
     return render(request, 'blog/post_view.html',
                   {'post': post,
                         'content_html': content_html,
                         'userprofile': userprofile,
-                        'comments': comments})
+                        'comments': comments,
+                        'comment_count': comment_count,})
 
 
 # 用户注册页面
