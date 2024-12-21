@@ -168,6 +168,10 @@ ACCOUNT_EMAIL_VERIFICATION = "none"
 SOCIALACCOUNT_PROVIDERS = {
     "github": {
         "VERIFIED_EMAIL": True,
+        'SCOPE': [
+            'read:user',
+            'user:email',
+        ],
         "APP": {
             "client_id": env('GITHUB_CLIENT_ID'),
             "secret": env('GITHUB_CLIENT_SECRET'),
