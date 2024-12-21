@@ -6,45 +6,40 @@
 {% block head %}
     <link rel="stylesheet" href="{% static 'css/page/post-view.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/components/my-card.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/monokai.min.css">
 
-{#    <style>#}
-{#        .author-container {#}
-{#            width: auto;#}
-            {#display: flex;#}
-            {#align-items: center;#}
-{#            background: #1e1e1e; /* 深色容器背景 */#}
-{#            padding: 10px;#}
-{#            border-radius: 15px;#}
-{#            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);#}
-{#            transition: all 0.3s ease;#}
-{#            cursor: pointer;#}
-{#        }#}
-{##}
-{#        .author-container:hover {#}
-{#            transform: translateY(-5px);#}
-{#            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);#}
-{#        }#}
-{##}
-{#        .profile-avatar {#}
-{#            width: 50px;#}
-{#            height: 50px;#}
-{#            object-fit: cover;#}
-{#            border-radius: 50%;#}
-{#        }#}
-{##}
-{#        .author-name {#}
-{#            font-size: 1.8em;#}
-{#            color: #00FFAB; /* 薄荷绿色 */#}
-{#            font-weight: bold;#}
-{#            letter-spacing: 1px;#}
-{#        }#}
-{##}
-{#        .author-bio {#}
-{#            font-size: 1em;#}
-{#            color: #bbb; /* 灰白色的个人介绍 */#}
-{#            margin-top: 8px;#}
-{#        }#}
-{#    </style>#}
+    <style>
+
+    .codehilite {
+      padding: 0;
+    }
+
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      text-align: center;
+      color: #ccc;
+      border-right: 1px solid #CCC;
+      vertical-align: top;
+      padding-right: 5px;
+    }
+
+    .hljs-ln-n {
+      width: 30px;
+    }
+
+    /* for block of code */
+    .hljs-ln .hljs-ln-code {
+      padding-left: 10px;
+      white-space: pre;
+    }
+
+    </style>
     <script type="text/javascript" async
             src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
@@ -150,6 +145,13 @@
 {% endblock %}
 
 {% block extra_scripts %}
+    <script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+        hljs.initLineNumbersOnLoad();
+    </script>
+
     <script type="text/javascript">
         const deleteModal = document.getElementById('deleteModal');
         deleteModal.addEventListener('show.bs.modal', function (event) {
