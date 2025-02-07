@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'allauth.account',
     "allauth.socialaccount",
     "allauth.socialaccount.providers.github",
+    'tailwind',
+    'theme',
     'app',
 ]
 
@@ -178,3 +180,9 @@ SOCIALACCOUNT_PROVIDERS = {
         },
     },
 }
+TAILWIND_APP_NAME = 'theme'
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+NPM_BIN_PATH = env('NPM_BIN_PATH')

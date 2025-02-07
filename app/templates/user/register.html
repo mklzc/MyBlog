@@ -1,79 +1,66 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
 {% load socialaccount %}
 {% load static %}
 {% load custom_filters %}
-{% block head_title %}Register - lzc's Blog{% endblock %}
-{% block head %}
+{% load tailwind_tags %}
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/page/register_and_login_form.css' %}">
+    <title>Register - lzc's Blog</title>
     <style>
-        .register-container {
-            max-width: 400px;
-            margin: 20px auto;
-            background-color: white;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .register-container h2 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
         .svg-icon-container svg {
             width: 40px;
             height: 40px;
         }
     </style>
-    <style>
-</style>
-{% endblock %}
-{% block content %}
-    <div class="register-container user-form">
-        <h2>Register</h2>
+    {% tailwind_css %}
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <div class="container mx-auto max-w-md mt-20 px-4">
+        <div class="bg-white shadow-md rounded-lg p-8">
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Register</h2>
+            <form method="POST" class="space-y-6">
+                {% csrf_token %}
 
-        <!-- 显示消息 -->
-{#        {% if messages %}#}
-{#            <div class="alert alert-info">#}
-{#                {% for message in messages %}#}
-{#                    <div>{{ message }}</div>#}
-{#                {% endfor %}#}
-{#            </div>#}
-{#        {% endif %}#}
+                <div>
+                    <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                    {{ form.username | add_class:"block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" }}
+                </div>
 
-        <!-- 注册表单 -->
-        <form method="POST">
-            {% csrf_token %}
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                    {{ form.email | add_class:"block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" }}
+                </div>
 
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                {{ form.username | add_class:"form-control"}}
-            </div>
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    {{ form.password | add_class:"block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" }}
+                </div>
 
-            <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                {{ form.email | add_class:"form-control"}}
-            </div>
+                <div>
+                    <label for="confirm_password" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                    {{ form.confirm_password | add_class:"block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" }}
+                </div>
 
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                {{ form.password | add_class:"form-control"}}
-            </div>
-
-            <div class="mb-3">
-                <label for="confirm_password" class="form-label">Confirm Password</label>
-                {{ form.confirm_password | add_class:"form-control"}}
-            </div>
-
-            <button type="submit" class="btn btn-primary w-100">Register</button>
-            <div class="text-center svg-icon-container">
-                <p>Or Continue with GitHub</p>
-                <a href="{% provider_login_url 'github' %}" class="d-flex justify-content-center">
-                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                <div>
+                    <button type="submit" class="w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue">
+                        Register
+                    </button>
+                </div>
+            </form>
+            <div class="text-center svg-icon-container mt-6">
+                <p class="text-sm text-gray-600">Or Continue with GitHub</p>
+                <a href="{% provider_login_url 'github' %}" class="inline-block">
+                    <svg class="fill-current text-gray-500 hover:text-gray-700" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
+                              clip-rule="evenodd"></path>
                     </svg>
                 </a>
-                <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+                <p class="text-sm text-gray-600 mt-4">已有账户，在此<a href="{% url 'login' %}" class="text-blue-600 hover:text-blue-700">登录</a></p>
             </div>
-        </form>
+        </div>
     </div>
-{% endblock %}
+</body>
+</html>
