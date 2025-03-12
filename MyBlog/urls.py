@@ -18,6 +18,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 from app import views
+from task_manager import views as task_manager
 from django.conf.urls.static import static
 
 from app.feeds import BlogRSSFeed
@@ -42,9 +43,15 @@ urlpatterns = [
     path('category/<int:category_id>', CategoryView.as_view(), name='category-posts'),
     path('search_list/', PostSearchView.as_view(), name='search-list'),
     path("accounts/", include("allauth.urls")),
-
     path('rss/', BlogRSSFeed(), name='rss_feed'),
+    path('task/', task_manager.task_list, name="task_list"),
+    path('task/new/', task_manager.task_create, name="task_create"),
+    path('task/<int:task_id>/edit/', task_manager.task_edit, name="task_edit"),
+    path('task/<int:task_id>/delete/', task_manager.task_delete, name="task_delete"),
+    path('task/<int:task_id>/complete/', task_manager.mark_completed, name="mark_completed"),
+    path('task/update_status/<int:task_id>/', task_manager.update_task_status, name='update_task_status'),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
